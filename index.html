@@ -1,0 +1,717 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Responsive Navbar with Video Header
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+   <link rel="stylesheet" href="style.css"> <!-- Ini menyambungkan ke file CSS -->
+</head>
+ <body>
+  <!-- animated star background dots -->
+  <div aria-hidden="true" class="absolute inset-0 -z-10 pointer-events-none">
+   <svg class="w-full h-full" fill="none" preserveaspectratio="xMidYMid slice" viewbox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg">
+    <circle class="star" cx="100" cy="200" fill="#e0d9e6" fill-opacity="0.3" r="1.5">
+    </circle>
+    <circle class="star" cx="300" cy="100" fill="#e0d9e6" fill-opacity="0.3" r="1">
+    </circle>
+    <circle class="star" cx="500" cy="400" fill="#e0d9e6" fill-opacity="0.3" r="1.5">
+    </circle>
+    <circle class="star" cx="700" cy="300" fill="#e0d9e6" fill-opacity="0.3" r="1">
+    </circle>
+    <circle class="star" cx="900" cy="600" fill="#e0d9e6" fill-opacity="0.3" r="1.5">
+    </circle>
+    <circle class="star" cx="1100" cy="200" fill="#e0d9e6" fill-opacity="0.3" r="1">
+    </circle>
+    <circle class="star" cx="1300" cy="500" fill="#e0d9e6" fill-opacity="0.3" r="1.5">
+    </circle>
+    <circle class="star" cx="1400" cy="100" fill="#e0d9e6" fill-opacity="0.3" r="1">
+    </circle>
+    <circle class="star" cx="200" cy="700" fill="#e0d9e6" fill-opacity="0.3" r="1">
+    </circle>
+    <circle class="star" cx="400" cy="800" fill="#e0d9e6" fill-opacity="0.3" r="1.5">
+    </circle>
+    <circle class="star" cx="600" cy="750" fill="#e0d9e6" fill-opacity="0.3" r="1">
+    </circle>
+    <circle class="star" cx="800" cy="850" fill="#e0d9e6" fill-opacity="0.3" r="1.5">
+    </circle>
+    <circle class="star" cx="1000" cy="700" fill="#e0d9e6" fill-opacity="0.3" r="1">
+    </circle>
+    <circle class="star" cx="1200" cy="800" fill="#e0d9e6" fill-opacity="0.3" r="1.5">
+    </circle>
+    <!-- floating shapes -->
+    <rect class="float-shape" height="200" rx="20" ry="20" stroke-width="1" width="200" x="600" y="100">
+    </rect>
+    <rect class="float-shape" height="200" rx="20" ry="20" stroke-width="1" width="200" x="800" y="300">
+    </rect>
+    <rect class="float-shape" height="200" rx="20" ry="20" stroke-width="1" width="200" x="1000" y="100">
+    </rect>
+   </svg>
+  </div>
+  <!-- Navbar -->
+  <header>
+   <nav aria-label="main navigation" class="navbar" role="navigation">
+    <div class="logo">
+     <a href="#">
+      Anarus cuy
+     </a>
+    </div>
+    <ul aria-label="Primary navigation" class="nav-links" id="navLinks" tabindex="-1">
+     <li>
+      <a href="#about" tabindex="0">
+       About Me
+      </a>
+     </li>
+     <li>
+      <a href="#projects" tabindex="0">
+       Projects
+      </a>
+     </li>
+     <li>
+      <a href="#certificates" tabindex="0">
+       Sertifikat
+      </a>
+     </li>
+     <li>
+      <a href="#skills" tabindex="0">
+       Skills
+      </a>
+     </li>
+     <li>
+      <a href="#gallery" tabindex="0">
+       Gallery
+      </a>
+     </li>
+    </ul>
+    <button aria-controls="navLinks" aria-expanded="false" aria-label="Toggle menu" class="hamburger" id="hamburger" type="button">
+     ☰
+    </button>
+   </nav>
+  </header>
+  <!-- Main content -->
+  <main class="flex-container" role="main">
+   <section class="text-section" id="about">
+    <h1>
+     Hi, I am
+     <br/>
+     <strong>
+      Anarus
+     </strong>
+    </h1>
+    <h2>
+     I am a
+     <span class="purple">
+      Anarus
+     </span>
+     <span class="cursor">
+     </span>
+    </h2>
+    <div aria-label="Personal description" class="description-card" tabindex="0">
+     I enjoy learning new things and try to overcome new challenges while
+        analyzing how I improved through them
+    </div>
+    <a class="btn-resume" href="#" role="button" tabindex="0">
+     Check Resume
+    </a>
+   </section>
+   <section aria-label="Profile picture of Anarus" class="image-section" tabindex="0">
+    <img alt="Profile image of young man wearing glasses and black hoodie with mountains background" decoding="async" height="320" loading="lazy" src="/tirusCuy12-main/img/pr.png" width="320"/>
+   </section>
+  </main>
+  <!-- SKILLS -->
+  <section id="skills">
+   <h1>
+    My
+    <span>
+     Skills
+    </span>
+   </h1>
+   <div class="container-image-skill" id="skillContainer">
+    <div aria-label="Skill HTML" class="field-image-skill" tabindex="0">
+     <img alt="Icon representing HTML5 logo in orange and white colors" class="image-skill" height="64" src="/tirusCuy12-main/img/logo_html.png" width="64"/>
+     <span>
+      HTML
+     </span>
+    </div>
+    <div aria-label="Skill CSS" class="field-image-skill" tabindex="0">
+     <img alt="Icon representing CSS3 logo in blue and white colors" class="image-skill" height="64" src="/tirusCuy12-main/img/logo_css.png" width="64"/>
+     <span>
+      CSS
+     </span>
+    </div>
+    <div aria-label="Skill JavaScript" class="field-image-skill" tabindex="0">
+     <img alt="Icon representing JavaScript logo in yellow and black colors" class="image-skill" height="64" src="/tirusCuy12-main/img/logo_javascript.png" width="64"/>
+     <span>
+      JAVASCRIPT
+     </span>
+    </div>
+    <div aria-label="Skill Linux" class="field-image-skill" tabindex="0">
+     <img alt="Icon representing Linux penguin mascot in black and white colors" class="image-skill" height="64" src="/tirusCuy12-main/img/proto/download.jpeg" width="64"/>
+     <span>
+      Linux
+     </span>
+    </div>
+    <div aria-label="Skill Cisco" class="field-image-skill" tabindex="0">
+     <img alt="Icon representing Cisco logo in blue and white colors" class="image-skill" height="64" src="/tirusCuy12-main/img/proto/p8.png" width="64"/>
+     <span>
+      CISCO
+     </span>
+    </div>
+    <div aria-label="Skill Kali Linux" class="field-image-skill" tabindex="0">
+     <img alt="Icon representing Kali Linux logo in blue and white colors" class="image-skill" height="64" src="/tirusCuy12-main/img/proto/Kali Linux Logo PNG Vector (SVG) Free Download.jpeg" width="64"/>
+     <span>
+      kali Linux
+     </span>
+    </div>
+    <div aria-label="Skill Figma" class="field-image-skill" tabindex="0">
+     <img alt="Icon representing Figma logo in multi-color vector style" class="image-skill" height="64" src="/tirusCuy12-main/img/proto/Figma’s new icon.jpeg" width="64"/>
+     <span>
+      FIgma
+     </span>
+    </div>
+    <div aria-label="Skill GitHub" class="field-image-skill" tabindex="0">
+     <img alt="Icon representing GitHub logo with black cat silhouette on white background" class="image-skill" height="64" src="/tirusCuy12-main/img/logo_github.png" width="64"/>
+     <span>
+      GITHUB
+     </span>
+    </div>
+   </div>
+  </section>
+  <!-- Projects Section -->
+  <section id="projects">
+   <h1>
+    Project
+   </h1>
+   <div class="container mx-auto p-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+     <div class="project-card">
+      <img alt="Desain Web Project for Web Edupioner" class="project-image" height="400" src="/tirusCuy12-main//img/proto/p2.png" width="600"/>
+      <h2>
+       Web edupioner
+       <span>
+        Projek lomba
+       </span>
+      </h2>
+      <p>
+       Membuat website untuk menyediakan info lomba, volunteer, beasiswa,
+            pertukaran pelajar
+      </p>
+      <div class="tech-stack">
+       <span>
+        HTML
+       </span>
+       <span>
+        CSS
+       </span>
+       <span>
+        JS
+       </span>
+      </div>
+     </div>
+     <div class="project-card">
+      <img alt="Link Phising Project" class="project-image" height="400" src="phiing.jpg" width="600"/>
+      <h2>
+       link phising
+       <span>
+       </span>
+      </h2>
+      <p>
+       Projek lomba
+      </p>
+      <div class="tech-stack">
+       <span>
+        Kali Linux
+       </span>
+       
+      </div>
+     </div>
+     <div class="project-card">
+      <img alt="Desain Web Project for Web Edupioner 2" class="project-image" height="400" src="/tirusCuy12-main/img/proto/p1.png" width="600"/>
+      <h2>
+       edulomba
+       <span>
+       </span>
+      </h2>
+      <p>
+       Projek lomba
+      </p>
+      <div class="tech-stack">
+       <span>
+        HTML
+       </span>
+       <span>
+        CSS
+       </span>
+       <span>
+        JS
+       </span>
+      </div>
+     </div>
+     <div class="project-card">
+      <img alt="Desain Pengalaman Pengguna Project" class="project-image" height="40" src="/tirusCuy12-main/img/proto/p3.png" width="50"/>
+      <h2>
+     Pack It easy
+       <span>
+        Projek lomba
+       </span>
+      </h2>
+      <p>
+       Ui/UX Tentang "Aplikasi Terintegrasi untuk Pengelolaan Sampah Organik
+            dan Penyediaan Kemasa Ramah Lingkungan di Indonesia"
+      </p>
+      <div class="tech-stack">
+       <span>
+        FIGMA
+       </span>
+      </div>
+     </div>
+     <div class="project-card">
+      <img alt="Desain Game Project" class="project-image" height="400" src="img/proto/p4.png" width="600"/>
+      <h2>
+       <span>
+        Projek lomba
+       </span>
+      </h2>
+      <p>
+       Implementasi User Experience Design dalam Pengembangan Aplikasi
+            YukKnabung sebagai Solusi Pengelolaan Keuangan Digital untuk Generasi
+            Muda Indonesia"
+      </p>
+      <div class="tech-stack">
+       <span>
+        FIGMA
+       </span>
+      </div>
+     </div>
+     <div class="project-card">
+      <img alt="Desain UI/UX Project CropDoctor" class="project-image" height="400" src="img/proto/p5 (2).png" width="600"/>
+      <h2>
+       UI/UX
+       <span>
+        Projek lomba
+       </span>
+      </h2>
+      <p>
+       "CropDoctor: AI-Based Plant Disease Diagnosis Application with
+            Solution Recommendations and User-Friendly Interface for Modern
+            Farmers"
+      </p>
+      <div class="tech-stack">
+       <span>
+        FIGMA
+       </span>
+      </div>
+     </div>
+     <div class="project-card">
+      <img alt="Desain Web Resto Project" class="project-image" height="400" src="img/proto/ptalent.jpg" width="600"/>
+      <h2>
+       web resto
+       <span>
+        Projek Talenthub
+       </span>
+      </h2>
+      <p>
+       Menjualkan berbagai menu nasgor dan mie ayam
+      </p>
+      <div class="tech-stack">
+       <span>
+        FIGMA
+       </span>
+      </div>
+     </div>
+     <div class="project-card">
+      <img alt="Desain Network Configuration Project" class="project-image" height="400" src="img/proto/p7.jpg" width="600"/>
+      <h2>
+       Projek Matkul
+       <span>
+        Konfigurasi Jaringan internet
+       </span>
+      </h2>
+      <p>
+       Menggunakan Routing dinamis
+      </p>
+      <div class="tech-stack">
+       <span>
+        CISCO
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Certification Section -->
+  <section id="certificates">
+   <h1>
+    <span>
+     Certification
+    </span>
+   </h1>
+   <div class="container mx-auto py-8">
+    <div class="cert-grid">
+     <div aria-label="Certificate 1" class="cert-card" role="button" tabindex="0">
+      <img alt="Certificate 1" class="w-full h-48 object-cover cursor-pointer" height="400" onclick="openModal('modal1')" src="img/1s.png" width="600"/>
+      <div class="cert-info">
+       <h2 class="text-lg font-semibold">
+        Certificate of Participation
+       </h2>
+       <p class="text-gray-600">
+        Jatim Developer day
+       </p>
+      </div>
+     </div>
+     <div aria-label="Certificate 2" class="cert-card" role="button" tabindex="0">
+      <img alt="Certificate 2" class="w-full h-48 object-cover cursor-pointer" height="400" onclick="openModal('modal2')" src="img/2s.png" width="600"/>
+      <div class="cert-info">
+       <h2 class="text-lg font-semibold">
+        Certificate of Excellence
+       </h2>
+       <p class="text-gray-600">
+        Linux Administration System
+       </p>
+      </div>
+     </div>
+     <div aria-label="Certificate 3" class="cert-card" role="button" tabindex="0">
+      <img alt="Certificate 3" class="w-full h-48 object-cover cursor-pointer" height="400" onclick="openModal('modal3')" src="img/3s.png" width="600"/>
+      <div class="cert-info">
+       <h2 class="text-lg font-semibold">
+        Certificate of Participation
+       </h2>
+       <p class="text-gray-600">
+       </p>
+      </div>
+     </div>
+     <div aria-label="Certificate 4" class="cert-card" role="button" tabindex="0">
+      <img alt="Certificate 4" class="w-full h-48 object-cover cursor-pointer" height="400" onclick="openModal('modal4')" src="img/4s.png" width="600"/>
+      <div class="cert-info">
+       <h2 class="text-lg font-semibold">
+        Certificate of Achievement
+       </h2>
+       <p class="text-gray-600">
+        Cyber Security
+       </p>
+      </div>
+     </div>
+     <div aria-label="Certificate 5" class="cert-card" role="button" tabindex="0">
+      <img alt="Certificate 5" class="w-full h-48 object-cover cursor-pointer" height="400" onclick="openModal('modal5')" src="img/5s.png" width="600"/>
+      <div class="cert-info">
+       <h2 class="text-lg font-semibold">
+        Certificate of Achievement
+       </h2>
+       <p class="text-gray-600">
+        Telah kompeten
+       </p>
+      </div>
+     </div>
+     <div aria-label="Certificate 6" class="cert-card" role="button" tabindex="0">
+      <img alt="Certificate 6" class="w-full h-48 object-cover cursor-pointer" height="400" onclick="openModal('modal6')" src="img/6s.png" width="600"/>
+      <div class="cert-info">
+       <h2 class="text-lg font-semibold">
+        Certificate of Achievement
+       </h2>
+       <p class="text-gray-600">
+        kompeten
+       </p>
+      </div>
+     </div>
+     <div aria-label="Certificate 7" class="cert-card" role="button" tabindex="0">
+      <img alt="Certificate 7" class="w-full h-48 object-cover cursor-pointer" height="400" onclick="openModal('modal7')" src="img/8s.png" width="600"/>
+      <div class="cert-info">
+       <h2 class="text-lg font-semibold">
+        Certificate of Achievement
+       </h2>
+       <p class="text-gray-600">
+        Finalist
+       </p>
+      </div>
+     </div>
+     <div aria-label="Certificate 8" class="cert-card" role="button" tabindex="0">
+      <img alt="Certificate 8" class="w-full h-48 object-cover cursor-pointer" height="400" onclick="openModal('modal8')" src="img/8.png" width="600"/>
+      <div class="cert-info">
+       <h2 class="text-lg font-semibold">
+        Certificate of Achievement
+       </h2>
+       <p class="text-gray-600">
+        Finalist
+       </p>
+      </div>
+     </div>
+     <div aria-label="Certificate 9" class="cert-card" role="button" tabindex="0">
+      <img alt="Certificate 9" class="w-full h-48 object-cover cursor-pointer" height="400" onclick="openModal('modal9')" src="img/Juara kuy.png" width="600"/>
+      <div class="cert-info">
+       <h2 class="text-lg font-semibold">
+        Certificate of Achievement
+       </h2>
+       <p class="text-gray-600">
+        Winner
+       </p>
+      </div>
+     </div>
+     <div aria-label="Certificate 10" class="cert-card" role="button" tabindex="0">
+      <img alt="Certificate 10" class="w-full h-48 object-cover cursor-pointer" height="400" onclick="openModal('modal10')" src="img/sertif ecs.png" width="600"/>
+      <div class="cert-info">
+       <h2 class="text-lg font-semibold">
+        Certificate of Achievement
+       </h2>
+       <p class="text-gray-600">
+        Alibaba
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- Modals -->
+   <div aria-labelledby="modal1Title" aria-modal="true" class="modal" id="modal1" role="dialog">
+    <div class="modal-content">
+     <button aria-label="Close modal" class="close" onclick="closeModal('modal1')">
+      ×
+     </button>
+     <img alt="Certificate 1" height="800" src="img/1s.png" width="1200"/>
+    </div>
+   </div>
+   <div aria-labelledby="modal2Title" aria-modal="true" class="modal" id="modal2" role="dialog">
+    <div class="modal-content">
+     <button aria-label="Close modal" class="close" onclick="closeModal('modal2')">
+      ×
+     </button>
+     <img alt="Certificate 2" height="800" src="img/2s.png" width="1200"/>
+    </div>
+   </div>
+   <div aria-labelledby="modal3Title" aria-modal="true" class="modal" id="modal3" role="dialog">
+    <div class="modal-content">
+     <button aria-label="Close modal" class="close" onclick="closeModal('modal3')">
+      ×
+     </button>
+     <img alt="Certificate 3" height="800" src="img/3s.png" width="1200"/>
+    </div>
+   </div>
+   <div aria-labelledby="modal4Title" aria-modal="true" class="modal" id="modal4" role="dialog">
+    <div class="modal-content">
+     <button aria-label="Close modal" class="close" onclick="closeModal('modal4')">
+      ×
+     </button>
+     <img alt="Certificate 4" height="800" src="img/4s.png" width="1200"/>
+    </div>
+   </div>
+   <div aria-labelledby="modal5Title" aria-modal="true" class="modal" id="modal5" role="dialog">
+    <div class="modal-content">
+     <button aria-label="Close modal" class="close" onclick="closeModal('modal5')">
+      ×
+     </button>
+     <img alt="Certificate 5" height="800" src="img/5s.png" width="1200"/>
+    </div>
+   </div>
+   <div aria-labelledby="modal6Title" aria-modal="true" class="modal" id="modal6" role="dialog">
+    <div class="modal-content">
+     <button aria-label="Close modal" class="close" onclick="closeModal('modal6')">
+      ×
+     </button>
+     <img alt="Certificate 6" height="800" src="img/6s.png" width="1200"/>
+    </div>
+   </div>
+   <div aria-labelledby="modal7Title" aria-modal="true" class="modal" id="modal7" role="dialog">
+    <div class="modal-content">
+     <button aria-label="Close modal" class="close" onclick="closeModal('modal7')">
+      ×
+     </button>
+     <img alt="Certificate 7" height="800" src="img/8s.png" width="1200"/>
+    </div>
+   </div>
+   <div aria-labelledby="modal8Title" aria-modal="true" class="modal" id="modal8" role="dialog">
+    <div class="modal-content">
+     <button aria-label="Close modal" class="close" onclick="closeModal('modal8')">
+      ×
+     </button>
+     <img alt="Certificate 8" height="800" src="img/8.png" width="1200"/>
+    </div>
+   </div>
+   <div aria-labelledby="modal9Title" aria-modal="true" class="modal" id="modal9" role="dialog">
+    <div class="modal-content">
+     <button aria-label="Close modal" class="close" onclick="closeModal('modal9')">
+      ×
+     </button>
+     <img alt="Certificate 9" height="800" src="img/Juara kuy.png" width="1200"/>
+    </div>
+   </div>
+   <div aria-labelledby="modal10Title" aria-modal="true" class="modal" id="modal10" role="dialog">
+    <div class="modal-content">
+     <button aria-label="Close modal" class="close" onclick="closeModal('modal10')">
+      ×
+     </button>
+     <img alt="Certificate 10" height="800" src="img/sertif ecs.png" width="1200"/>
+    </div>
+   </div>
+  </section>
+  <!-- Personal Gallery Section -->
+  <section class="bg-[#0A0F29] text-white" id="gallery">
+   <div class="p-8 max-w-7xl mx-auto" id="app">
+    <h1 class="text-center text-2xl font-bold text-[#C4FF00] mb-8">
+     Personal Gallery
+    </h1>
+    <div class="gallery-grid">
+     <div class="gallery-card">
+      <img alt="Portrait 1 of a group at Google Developer ITS event" class="w-full h-64 object-cover" height="300" src="img/g/g1.JPG" width="300"/>
+      <div class="gallery-info">
+       <h2 class="text-black text-lg font-bold">
+        Google developer ITS
+       </h2>
+       <p class="text-black">
+        PARTY MEMBER
+       </p>
+      </div>
+     </div>
+     <div class="gallery-card">
+      <img alt="Portrait 2 of a group at Google Developer ITS event" class="w-full h-64 object-cover" height="300" src="img/g/g2.JPG" width="300"/>
+      <div class="gallery-info">
+       <h2 class="text-black text-lg font-bold">
+        Google developer ITS
+       </h2>
+       <p class="text-black">
+        PARTY MEMBER
+       </p>
+      </div>
+     </div>
+     <div class="gallery-card">
+      <img alt="Portrait 3 of Jatim Developer Day community members" class="w-full h-64 object-cover" height="300" src="img/g/gg.jpg" width="300"/>
+      <div class="gallery-info">
+       <h2 class="text-black text-lg font-bold">
+        Jatim Developer Day
+       </h2>
+       <p class="text-black">
+        Komunitas Developer Jatim
+       </p>
+      </div>
+     </div>
+     <div class="gallery-card">
+      <img alt="Portrait 4 of person focusing on splicing fiber optic cables" class="w-full h-64 object-cover" height="300" src="img/g/WhatsApp Image 2024-12-29 at 14.42.31_deb760e8.jpg" width="300"/>
+      <div class="gallery-info">
+       <h2 class="text-black text-lg font-bold">
+        Lagi Lsp cuy
+       </h2>
+       <p class="text-black">
+        Lagi focuss splicing fiber hehe
+       </p>
+      </div>
+     </div>
+     <div class="gallery-card">
+      <img alt="Portrait 5 of group photo with important people at smeas" class="w-full h-64 object-cover" height="300" src="img/g/WhatsApp Image 2024-12-29 at 14.42.43_b957cc51.jpg" width="300"/>
+      <div class="gallery-info">
+       <h2 class="text-black text-lg font-bold">
+        fotbar bersama orang penting smeas
+       </h2>
+       <p class="text-black">
+        Pembukaan Lsp
+       </p>
+      </div>
+     </div>
+     <div class="gallery-card">
+      <img alt="Portrait 6 of finalist at Grand final Cakning vokasi" class="w-full h-64 object-cover" height="300" src="img/g/WhatsApp Image 2024-12-29 at 14.42.45_92ae9cee.jpg" width="300"/>
+      <div class="gallery-info">
+       <h2 class="text-black text-lg font-bold">
+        Grand final Cakning vokasi
+       </h2>
+       <p class="text-black">
+        Finalist
+       </p>
+      </div>
+     </div>
+     <div class="gallery-card">
+      <img alt="Portrait 7 of group gathering with technical students" class="w-full h-64 object-cover" height="300" src="img/g/WhatsApp Image 2024-12-29 at 14.42.46_c91cdbfd.jpg" width="900"/>
+      <div class="gallery-info">
+       <h2 class="text-black text-lg font-bold">
+        Lagi kumpul bersama anak teknik
+       </h2>
+       <p class="text-black">
+        Tidak ada sepuh sepuh an di circle kami, Saling support satu sama lain
+       </p>
+      </div>
+     </div>
+     <div class="gallery-card">
+      <img alt="Portrait 8 of person focusing on PKK" class="w-full h-64 object-cover" height="300" src="img/g/WhatsApp Image 2024-12-29 at 14.42.49_51e7d797.jpg" width="300"/>
+      <div class="gallery-info">
+       <h2 class="text-black text-lg font-bold">
+        Random wkwk
+       </h2>
+       <p class="text-black">
+        Lagi fokus pkk
+       </p>
+      </div>
+     </div>
+     <div class="gallery-card">
+      <img alt="Portrait 9 of group photo with elders at smeas" class="w-full h-64 object-cover" height="300" src="img/g/WhatsApp Image 2024-12-29 at 14.42.50_dc57f54f.jpg" width="300"/>
+      <div class="gallery-info">
+       <h2 class="text-black text-lg font-bold">
+        fotbar bersama sepuhh
+       </h2>
+       <p class="text-black">
+        Trio smeas
+       </p>
+      </div>
+     </div>
+     <div class="gallery-card">
+      <img alt="Portrait 10 of camera roll with friends" class="w-full h-64 object-cover" height="300" src="img/g/WhatsApp Image 2024-12-29 at 14.42.47_c324a16d.jpg" width="300"/>
+      <div class="gallery-info">
+       <h2 class="text-black text-lg font-bold">
+        Kamera roll eksen haha
+       </h2>
+       <p class="text-black">
+        Trio smeas
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <script>
+   // Navbar toggle
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+      const expanded = hamburger.getAttribute("aria-expanded") === "true" || false;
+      hamburger.setAttribute("aria-expanded", !expanded);
+      navLinks.classList.toggle("active");
+    });
+
+    // Modal functions
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = "flex";
+        modal.querySelector(".close").focus();
+      }
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    // Close modal on outside click or ESC key
+    window.addEventListener("click", (e) => {
+      const modals = document.querySelectorAll(".modal");
+      modals.forEach((modal) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        const modals = document.querySelectorAll(".modal");
+        modals.forEach((modal) => {
+          if (modal.style.display === "flex") {
+            modal.style.display = "none";
+          }
+        });
+      }
+    });
+  </script>
+ </body>
+</html>
